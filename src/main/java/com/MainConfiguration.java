@@ -31,7 +31,7 @@ public class MainConfiguration {
         SessionFactory sessionFactory = applicationContext.getBean(SessionFactory.class);
         Session session = sessionFactory.openSession();
         session.getTransaction().begin();
-        session.save(new TestEntity(1, "test"));
+        session.save(new TestEntity(132, "test"));
         session.getTransaction().commit();
         session.flush();
     }
