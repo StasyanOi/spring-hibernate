@@ -38,7 +38,6 @@ public class HibernateConfiguration {
         LocalSessionFactoryBean localSessionFactoryBean = new LocalSessionFactoryBean();
         Properties properties = new Properties();
         properties.setProperty(HibernateProperties.HIBERNATE_HBM2DDL_AUTO, "create");
-        properties.setProperty(HibernateProperties.HIBERNATE_DIALECT, "org.hibernate.dialect.PostgreSQL9Dialect");
         localSessionFactoryBean.setPackagesToScan("com.app.entities");
         localSessionFactoryBean.setHibernateProperties(properties);
         localSessionFactoryBean.setDataSource(driverManagerDatasource());
