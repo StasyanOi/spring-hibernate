@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation("org.springframework:spring-context:5.3.2")
+    annotationProcessor("org.projectlombok:lombok:1.18.16")
+    implementation("org.projectlombok:lombok:1.18.16")
+    implementation("org.hibernate:hibernate-core:4.3.11.Final")
+    implementation("com.zaxxer:HikariCP:3.4.5")
+    implementation("org.postgresql:postgresql:42.2.18.jre7")
+    implementation("org.springframework:spring-orm:4.0.3.RELEASE")
+    implementation("org.springframework:spring-web:5.3.2")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
