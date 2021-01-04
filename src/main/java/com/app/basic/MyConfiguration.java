@@ -27,6 +27,7 @@ public class MyConfiguration implements ApplicationContextAware {
 
     @Bean
     public String stringBean() {
+        System.out.println("create stringBean");
         return "stringBean";
     }
 

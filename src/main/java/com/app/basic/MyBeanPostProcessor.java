@@ -10,7 +10,11 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof MyConfiguration) {
-            System.out.println("BEAN PREPROCESS");
+            System.out.println("BEAN PREPROCESS CONFIG");
+        }
+
+        if (bean instanceof MyPureComponent) {
+            System.out.println("BEAN PREPROCESS PURE");
         }
         return bean;
     }
@@ -18,7 +22,10 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof MyConfiguration) {
-            System.out.println("BEAN POSTPROCESS");
+            System.out.println("BEAN POSTPROCESS CONFIG");
+        }
+        if (bean instanceof MyPureComponent) {
+            System.out.println("BEAN POSTPROCESS PURE");
         }
         return bean;
     }
